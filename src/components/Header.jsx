@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
