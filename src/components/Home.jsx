@@ -10,7 +10,7 @@ const Home = (props) => {
       <ImgSlider />
       <Viewers />
       <Recommends />
-      {/*  <NewDisney />
+      {/*     <NewDisney />
       <Originals />
       <Trending /> */}
     </Container>
