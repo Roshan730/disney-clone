@@ -1,32 +1,24 @@
-import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectOriginal } from "../features/movies/movieSlice";
 
 const Originals = (props) => {
+  const movies = useSelector(selectOriginal);
+
   return (
     <Container>
       <h4>Originals</h4>
       <Content>
-        <Wrap>
-          <Link to={"/"}>
-            <img src="" alt="" />
-          </Link>
-        </Wrap>
-        <Wrap>
-          <Link to={"/"}>
-            <img src="" alt="" />
-          </Link>
-        </Wrap>
-        <Wrap>
-          <Link to={"/"}>
-            <img src="" alt="" />
-          </Link>
-        </Wrap>
-        <Wrap>
-          <Link to={"/"}>
-            <img src="" alt="" />
-          </Link>
-        </Wrap>
+        {movies &&
+          movies.map((movie, key) => (
+            <Wrap key={key}>
+              {movie.id}
+              <Link to={`/detail/` + movie.id}>
+                <img src={movie.cardImg} alt={movie.title} />
+              </Link>
+            </Wrap>
+          ))}
       </Content>
     </Container>
   );
@@ -35,9 +27,11 @@ const Originals = (props) => {
 const Container = styled.div`
   padding: 0 0 26px;
 `;
+
 const Content = styled.div`
   display: grid;
   grid-gap: 25px;
+  gap: 25px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 
   @media (max-width: 768px) {
