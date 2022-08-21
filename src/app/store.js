@@ -8,6 +8,6 @@ export default configureStore({
     movie: movieReducer,
   },
   middleware: getDefaultMiddleware({
-    serializableCheck: false,
+    serializableCheck: true,
   }),
 });

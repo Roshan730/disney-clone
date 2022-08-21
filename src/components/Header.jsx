@@ -78,20 +78,16 @@ const Header = (props) => {
               <span>SEARCH</span>
             </a>
             <a>
-              <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
-              <span>WATCHLIST</span>
-            </a>
-            <a>
               <img src="/images/original-icon.svg" alt="ORIGINALS" />
               <span>ORIGINALS</span>
             </a>
             <a>
-              <img src="/images/movie-icon.svg" alt="MOVIES" />
-              <span>MOVIES</span>
+              <img src="/images/movie-icon.svg" alt="TRENDING" />
+              <span>TRENDING</span>
             </a>
             <a>
-              <img src="/images/series-icon.svg" alt="SERIES" />
-              <span>SERIES</span>
+              <img src="/images/series-icon.svg" alt="DISNEY +" />
+              <span>DISNEY +</span>
             </a>
           </NavMenu>
           <SignOut>
